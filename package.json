@@ -4,7 +4,7 @@
   "type": "module",
   "repository": "https://github.com/ryu9663/storybook-npm-publish.git",
   "author": "Junyeol Ryu",
-  "homepage": "https://junyeol-components.vercel.app/",
+  "homepage": "https://storybook-npm-publish.vercel.app/",
   "scripts": {
     "start": "vite",
     "build:lib": "tsc && vite build",
