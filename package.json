@@ -1,7 +1,19 @@
 {
   "name": "storybook-npm-publish",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.umd.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist"
+  ],
   "repository": "https://github.com/ryu9663/storybook-npm-publish.git",
   "author": "Junyeol Ryu",
   "homepage": "https://storybook-npm-publish.vercel.app/",
