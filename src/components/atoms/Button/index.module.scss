@@ -1,0 +1,58 @@
+@use "src/styles/libs" as *;
+
+.button {
+  display: inline-block;
+  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  line-height: 1;
+  color: #333;
+  background-color: transparent;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px $BLUISH-GRAY-300, 0 4px 16px $BLUISH-GRAY-100;
+
+  @include font-size;
+  @include font-weight;
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+
+  &--no_border {
+    border: none;
+    box-shadow: none;
+  }
+
+  &--small {
+    width: 80px;
+    height: 35px;
+    padding: 10px 16px;
+    font-size: $SMALL;
+  }
+  &--normal {
+    width: 160px;
+    height: 40px;
+    padding: 11px 20px;
+    font-size: $NORMAL;
+  }
+  &--large {
+    width: 250px;
+    height: 50px;
+    padding: 12px 24px;
+    font-size: $LARGE;
+  }
+
+  &.loading {
+    cursor: not-allowed;
+    background-color: $BLUISH-GRAY-50;
+    .loading_spinner {
+      box-sizing: border-box;
+      display: inline-block;
+      width: 18px;
+      height: 18px;
+      border: 2px solid #fff;
+      border-bottom-color: $BLUISH-GRAY-300;
+      border-radius: 50%;
+
+      @include spinner-rotation;
+    }
+  }
+}
